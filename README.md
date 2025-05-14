@@ -26,4 +26,4 @@ Chimera's linux distro configs for new installations
 
 ## Wiki
 
-The rest of the guide is available in the [wiki](https://github.com/RayChimera/configs/wiki)
+The rest of the guide is available on the [wiki](https://github.com/RayChimera/configs/wiki)
