@@ -97,7 +97,11 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
     sudo apt update && sudo apt install helix
     ```
 
-1. Copy Helix config: #TODO
+1. Copy Helix configs:
+
+    ``` Bash
+    cp -r configs/helix/ ~/.config/
+    ```
 
 ### VSCode
 

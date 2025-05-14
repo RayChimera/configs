@@ -9,9 +9,22 @@ gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 auto-completion = true
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+left = [
+    "mode",
+    "spinner",
+    "file-name",
+    "read-only-indicator",
+    "file-modification-indicator",
+]
 center = []
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = [
+    "diagnostics",
+    "selections",
+    "position",
+    "file-encoding",
+    "file-line-ending",
+    "file-type",
+]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -29,6 +42,6 @@ select = "underline"
 hidden = false
 
 [editor.auto-save]
-focus-lost=true
+focus-lost = true
 after-delay.enable = true
 after-delay.timeout = 3000
