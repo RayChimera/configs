@@ -19,7 +19,9 @@
   "itemDetails.showWebFormDetails": true,
   "developers.experience.dismissed": true,
   "developers.experience.enabled": true,
+  "app.keepInTray": true,
   "authTags": {
+    "app.keepInTray": "lZbNNQnZow8yXHcDoCVQdw57yrxHGU6jVNuSkDY46Xk",
     "appearance.floatingSidebar": "z5JWgBzpY+wML00WdspU5RD5z94Yv3lGO94DPjJe8IE",
     "browsers.extension.enabled": "JQuPyJE+9LX1wtPpbpnngXEG+zFmdQh4rysMzEn8YEc",
     "devWatchtower.localDiskScanning": "/pNeAt+iFI0bdKvKnX4n3sEQ+SS9jhiKZIJK7j13WT0",
