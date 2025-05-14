@@ -1,12 +1,63 @@
 # General
-Private repo for my linux distro configs for a new installations
+
+Chimera's linux distro configs for a new installations
 
 ## First run
 
-1. Install a shell (`zsh`/`fish`)
-Assuming `Debian`/`Ubuntu`: ```sudo apt install zsh fish```
+### Prerequisites
 
-* If `zsh` is desired:
-  * [Install](https://ohmyz.sh/#install) `oh-my-zsh` like that: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-  * Copy zsh config from #TODO
-* If fish is desired #TODO
+Assuming *Debian*/*Ubuntu*: #TODO
+
+``` Bash
+sudo apt install build-essential wget curl gpg apt-transport-https git
+```
+
+1. Install prerequisites:
+
+### Shell
+
+1. Install a shell (*zsh*/*fish*). Assuming *Debian*/*Ubuntu*:
+```sudo apt install zsh fish```
+
+    * If *zsh* is desired:
+        1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+        2. Copy *zsh* config from #TODO
+    * If *fish* is desired #TODO
+
+1. Get all shells paths: ```cat /etc/shells```
+1. Set preferred shell:
+
+* For *zsh*: `chsh -s /bin/zsh chimera`
+* For *fish*: `chsh -s /usr/bin/fish chimera`
+
+### Helix
+
+1. [Install](https://docs.helix-editor.com/package-managers.html) *Helix*
+
+* From PPA (`Ubuntu`):
+
+``` Bash
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+```
+
+### VSCode
+
+> Don't forget to choose an appropriate profile!
+
+1. [Add](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux) the repo:
+
+    ``` Bash
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+    echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+    rm -f packages.microsoft.gpg
+    ```
+
+1. Install VSCode:
+
+    ``` Bash
+    sudo apt update
+    sudo apt install code
+    ```
