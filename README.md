@@ -1,6 +1,6 @@
 # General
 
-Chimera's linux distro configs for a new installations
+Chimera's linux distro configs for new installations
 
 > Use headings list to quickly jump to the section you need, Luke!
 
