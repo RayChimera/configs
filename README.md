@@ -2,7 +2,7 @@
 
 Chimera's linux distro configs for a new installations
 
-## First run
+## Basics
 
 ### Prerequisites
 
@@ -10,9 +10,15 @@ Assuming *Debian*/*Ubuntu*: #TODO
 
 1. Install prerequisites:
 
-``` Bash
-sudo apt install build-essential wget curl gpg apt-transport-https git
-```
+    ``` Bash
+    sudo apt install build-essential wget curl gpg apt-transport-https git
+    ```
+
+1. Make `~/Projects`
+
+    ``` Bash
+    mkdir ~/Projects
+    ```
 
 ### Shell
 
@@ -33,9 +39,9 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
         cp zsh/.p10k.zsh ~/.p10k.zsh
         ```
 
-        Switch to an actual config ffs #TODO
+        > Switch to an actual config ffs #TODO
     * If *fish* is desired:
-        #TODO
+        > #TODO
 
 1. Get all shells paths:
 ```cat /etc/shells```
@@ -81,16 +87,18 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
 
 ### 1Password
 
-That's #TODO
+> #TODO
+
+## Installing non-directly coding-related programs
 
 ### Firefox
 
-That's #TODO
+> #TODO
 
 ### Telegram
 
-That's #TODO
+> #TODO
 
 ### Spotify
 
-That's #TODO
+> #TODO
