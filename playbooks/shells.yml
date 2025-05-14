@@ -1,0 +1,12 @@
+---
+- name: Setting up a shell
+  hosts: localhost
+
+  tasks:
+  - name: Install zsh and fish
+    become: true
+    ansible.builtin.apt:
+      pkg:
+        - zsh
+        - fish
+      state: latest

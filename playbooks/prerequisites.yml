@@ -16,17 +16,8 @@
       state: latest
 
   - name: Install Flatpak
-    become: true
-    ansible.builtin.apt:
-      pkg:
-        - flatpak
-      state: latest
-
-  - name: Configure Flatpak remote
-    community.general.flatpak_remote:
-      name: flathub
-      state: present
-      flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    ansible.builtin.include_tasks:
+      file: components/flatpak.yml
   
   - name: Make "Projects" folder
     ansible.builtin.file:
