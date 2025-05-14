@@ -134,6 +134,12 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     cp -r configs/helix/ ~/.config/
     ```
 
+1. Add a symlink for easier config management in the future
+
+    ``` Bash
+    ln -s ~/.config/helix/* configs/helix/
+    ```
+
 ### VSCode
 
 > Don't forget to choose an appropriate profile in VSCode! Configs are synchronized via *GitHub* profile, *NOT* *Microsoft* one
