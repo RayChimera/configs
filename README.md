@@ -72,10 +72,10 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
 
-1. Copy *zsh* config from `~` to `~/.zshrc`:
+1. Make a symlink to *zsh* config
 
     ``` Bash
-    cp configs/zsh/.zshrc ~/.zshrc
+    ln -s ~/Projects/configs/configs/zsh/.zshrc ~/.zshrc
     ```
 
 1. [Install fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
@@ -85,17 +85,10 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     git clone --depth=1 <https://github.com/romkatv/powerlevel10k.git> "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
     ```
 
-1. Copy *Powerlevel10k* config:
+1. Make a symlink to *Powerlevel10k* config
 
     ``` Bash
-    cp configs/zsh/.p10k.zsh ~/.p10k.zsh
-    ```
-
-1. Add a symlink for easier config management in the future
-
-    ``` Bash
-    ln -s ~/.zshrc configs/zsh/.zshrc
-    ln -s ~/.p10k.zsh configs/zsh/.p10k.zsh
+    ln -s ~/Projects/configs/configs/zsh/.p10k.zsh ~/.p10k.zsh
     ```
 
 #### *fish*
@@ -131,16 +124,10 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     sudo apt update && sudo apt install helix
     ```
 
-1. Copy Helix configs:
+1. Make a symlink to configs
 
     ``` Bash
-    ln -s configs/helix/ ~/.config/
-    ```
-
-1. Add a symlink for easier config management in the future
-
-    ``` Bash
-    ln -s ~/.config/helix/* configs/helix/
+    ln -s ~/Projects/configs/configs/helix ~/.config/helix     
     ```
 
 ### VSCode
@@ -183,16 +170,10 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     sudo apt update && sudo apt install 1password
     ```
 
-1. Copy configs
+1. Make a symlink to configs
 
     ``` Bash
-    cp configs/1Password/* ~/.config/1Password/settings/
-    ```
-
-1. Add a symlink for easier config management in the future
-
-    ``` Bash
-    ln -s ~/.config/1Password/settings/settings.json configs/1Password/settings.json
+    ln -s ~/Projects/configs/configs/1Password/settings.json ~/.config/1Password/settings/settings.json
     ```
 
 ## Installing important non-directly coding-related programs
