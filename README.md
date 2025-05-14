@@ -170,7 +170,13 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 1. Copy configs
 
     ``` Bash
-    cp configs/1Password/* /home/chimera/.config/1Password/settings/
+    cp configs/1Password/* ~/.config/1Password/settings/
+    ```
+
+1. Add a symlink for easier config management in the future
+
+    ``` Bash
+    ln -s ~/.config/1Password/settings/settings.json configs/1Password/settings.json
     ```
 
 ## Installing important non-directly coding-related programs
@@ -201,7 +207,7 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 
 ### Telegram
 
-> Settings sync #TODO
+> Settings sync #TODO (is it even needed?)
 
 1. Install via Flatpak
 
