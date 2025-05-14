@@ -211,4 +211,21 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 
 ### Spotify
 
-> #TODO
+> Not officially available in Russia, so I had to use [OMGUbuntu](https://www.omglinux.com/how-to-install-spotify-on-linux/). Configs sync is not required
+
+1. Install the repo
+
+    ``` Bash
+    curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+    echo "deb <http://repository.spotify.com> stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+    ```
+
+2. Install Spotify
+
+    ``` Bash
+    sudo apt update && sudo apt install spotify-client
+    ```
+
+## Russia-specific
+
+> #TODO HideMyName VPN
