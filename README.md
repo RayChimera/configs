@@ -21,8 +21,21 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
 
     * If *zsh* is desired:
         1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-        2. Copy *zsh* config from #TODO
-    * If *fish* is desired #TODO
+        1. Copy *zsh* config from `~` to `~/.zshrc`:
+
+        ``` Bash
+        cp zsh/.zshrc ~/.zshrc
+        ```
+
+        1. Copy *powerlevel10k* theme:
+
+        ``` Bash
+        cp zsh/.p10k.zsh ~/.p10k.zsh
+        ```
+
+        Switch to an actual config ffs #TODO
+    * If *fish* is desired:
+        #TODO
 
 1. Get all shells paths: ```cat /etc/shells```
 1. Set preferred shell:
@@ -32,15 +45,17 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
 
 ### Helix
 
-1. [Install](https://docs.helix-editor.com/package-managers.html) *Helix*
+1. [Install](https://docs.helix-editor.com/package-managers.html) *Helix*:
 
-* From PPA (`Ubuntu`):
+    * From PPA (`Ubuntu`):
 
-``` Bash
-sudo add-apt-repository ppa:maveonair/helix-editor
-sudo apt update
-sudo apt install helix
-```
+    ``` Bash
+    sudo add-apt-repository ppa:maveonair/helix-editor
+    sudo apt update
+    sudo apt install helix
+    ```
+
+1. Copy Helix config: #TODO
 
 ### VSCode
 
