@@ -54,6 +54,12 @@ Assuming *Debian*/*Ubuntu*: #TODO
         ```
 
     * If *fish* is desired:
+        1. Install fish:
+
+            ``` Bash
+            sudo apt install fish
+            ```
+
         > #TODO
 
 1. Get all shells paths:
