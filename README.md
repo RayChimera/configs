@@ -134,7 +134,7 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
 1. Copy Helix configs:
 
     ``` Bash
-    cp -r configs/helix/ ~/.config/
+    ln -s configs/helix/ ~/.config/
     ```
 
 1. Add a symlink for easier config management in the future
