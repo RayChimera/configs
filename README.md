@@ -32,43 +32,42 @@ Assuming *Debian*/*Ubuntu*: #TODO
 1. Install a shell (*zsh*/*fish*). Assuming *Debian*/*Ubuntu*:
 ```sudo apt install zsh fish```
 
-    <details>
-        <summary>If :heavy_check_mark: *zsh* is desired</summary>
-        1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*:
+### If :white_check_mark: *zsh* is desired
 
-            ``` Bash
-            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-            ```
+1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*:
 
-        1. Copy *zsh* config from `~` to `~/.zshrc`:
+    ``` Bash
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
 
-            ``` Bash
-            cp zsh/.zshrc ~/.zshrc
-            ```
+1. Copy *zsh* config from `~` to `~/.zshrc`:
 
-        1. [Install fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
-        1. Install *Powerlevel10k*
+    ``` Bash
+    cp zsh/.zshrc ~/.zshrc
+    ```
 
-            ``` Bash
-            git clone --depth=1 <https://github.com/romkatv/powerlevel10k.git> "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-            ```
+1. [Install fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+1. Install *Powerlevel10k*
 
-        1. Copy *Powerlevel10k* config:
+    ``` Bash
+    git clone --depth=1 <https://github.com/romkatv/powerlevel10k.git> "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+    ```
 
-        ``` Bash
-        cp zsh/.p10k.zsh ~/.p10k.zsh
-        ```
-    </details>
-    <details>
-        <summary>If :white_check_mark: *fish* is desired:</summary>
-        1. Install fish:
+1. Copy *Powerlevel10k* config:
 
-            ``` Bash
-            sudo apt install fish
-            ```
+``` Bash
+cp zsh/.p10k.zsh ~/.p10k.zsh
+```
 
-        > #TODO
-    </details>
+### If *fish* is desired
+
+1. Install fish:
+
+    ``` Bash
+    sudo apt install fish
+    ```
+
+    > #TODO
 1. Get all shells paths:
 ```cat /etc/shells```
 
