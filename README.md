@@ -8,11 +8,11 @@ Chimera's linux distro configs for a new installations
 
 Assuming *Debian*/*Ubuntu*: #TODO
 
+1. Install prerequisites:
+
 ``` Bash
 sudo apt install build-essential wget curl gpg apt-transport-https git
 ```
-
-1. Install prerequisites:
 
 ### Shell
 
@@ -37,7 +37,9 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
     * If *fish* is desired:
         #TODO
 
-1. Get all shells paths: ```cat /etc/shells```
+1. Get all shells paths:
+```cat /etc/shells```
+
 1. Set preferred shell:
 
 * For *zsh*: `chsh -s /bin/zsh chimera`
@@ -59,7 +61,7 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
 
 ### VSCode
 
-> Don't forget to choose an appropriate profile!
+> Don't forget to choose an appropriate profile in VSCode!
 
 1. [Add](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux) the repo:
 
@@ -76,3 +78,19 @@ sudo apt install build-essential wget curl gpg apt-transport-https git
     sudo apt update
     sudo apt install code
     ```
+
+### 1Password
+
+That's #TODO
+
+### Firefox
+
+That's #TODO
+
+### Telegram
+
+That's #TODO
+
+### Spotify
+
+That's #TODO
