@@ -70,6 +70,9 @@ cp zsh/.p10k.zsh ~/.p10k.zsh
     ```
 
     > #TODO
+
+#### Continue with setting up shell
+
 1. Get all shells paths:
 ```cat /etc/shells```
 
