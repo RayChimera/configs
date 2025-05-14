@@ -6,8 +6,8 @@ Chimera's linux distro configs for a new installations
 
 ## Common shortcuts
 
-* :heavy_check_mark: - My default option for a tool
-* :white_check_mark: - backup option for a tool (I consider switching to it probably or legacy tool). I shouldn't install it if I'm not sure I want to switch right now
+* :white_check_mark: - My default option for a tool where multiple options are available
+* No checkmark - backup option for a tool (I consider switching to it probably or legacy tool). I shouldn't install it if I'm not sure I want to switch right now
 
 ## Basics
 
