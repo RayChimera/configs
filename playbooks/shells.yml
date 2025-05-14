@@ -3,6 +3,11 @@
   hosts: localhost
 
   tasks:
+  - name: Display all variables/facts known for a host
+    debug:
+      var: hostvars[inventory_hostname]
+    tags: debug_info
+
   - name: Install a chosen shell
     become: true
     ansible.builtin.apt:

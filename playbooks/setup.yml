@@ -1,5 +1,5 @@
 ---
-- name: Setting up a shell
+- name: Choose what to install
   hosts: localhost
   vars_prompt:
   
