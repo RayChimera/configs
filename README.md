@@ -18,8 +18,11 @@ Chimera's linux distro configs for a new installations
 
 ### Ideas for improvement
 
-1. Make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
-2. Turn it into a *bash* script
+* [x] Make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
+
+> Check if it works as intended (the configs should update themselves in the repo)
+
+* [ ] Turn it into a *Ansible* or at least a *bash* script
 
 ## Basics
 
