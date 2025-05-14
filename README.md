@@ -2,7 +2,12 @@
 
 Chimera's linux distro configs for a new installations
 
-> Idea: make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
+> Use headings list to quickly jump to the section you need, Luke!
+
+## Ideas
+
+1. Make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
+2. Turn it into a *bash* script
 
 ## Common shortcuts
 
@@ -13,7 +18,7 @@ Chimera's linux distro configs for a new installations
 
 ### Prerequisites
 
-Assuming *Debian*/*Ubuntu*: #TODO
+Assuming *Debian*/*Ubuntu* and derivatives: #TODO
 
 1. Install prerequisites:
 
@@ -45,7 +50,7 @@ Assuming *Debian*/*Ubuntu*: #TODO
 1. Copy *zsh* config from `~` to `~/.zshrc`:
 
     ``` Bash
-    cp zsh/.zshrc ~/.zshrc
+    cp configs/zsh/.zshrc ~/.zshrc
     ```
 
 1. [Install fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
@@ -58,7 +63,7 @@ Assuming *Debian*/*Ubuntu*: #TODO
 1. Copy *Powerlevel10k* config:
 
 ``` Bash
-cp zsh/.p10k.zsh ~/.p10k.zsh
+cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 ```
 
 #### *fish*
