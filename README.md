@@ -27,7 +27,7 @@ Assuming *Debian*/*Ubuntu*: #TODO
 1. Install a shell (*zsh*/*fish*). Assuming *Debian*/*Ubuntu*:
 ```sudo apt install zsh fish```
 
-    * If *zsh* is desired:
+    * If :heavy_check_mark: *zsh* is desired:
         1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: 
 
             ``` Bash
