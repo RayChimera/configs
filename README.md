@@ -4,15 +4,22 @@ Chimera's linux distro configs for a new installations
 
 > Use headings list to quickly jump to the section you need, Luke!
 
-## Ideas
+## Informational
 
-1. Make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
-2. Turn it into a *bash* script
-
-## Common shortcuts
+### Common shortcuts
 
 * :white_check_mark: - My default option for a tool where multiple options are available
 * No checkmark - backup option for a tool (I consider switching to it probably or legacy tool). I shouldn't install it if I'm not sure I want to switch right now
+
+### Basic ideas
+
+1. Install via OS package managers (not *Flatpak* or *Snap*, god forbid) if possible
+1. Copy only things that are necessary
+
+### Ideas for improvement
+
+1. Make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
+2. Turn it into a *bash* script
 
 ## Basics
 
@@ -115,7 +122,7 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 
 ### VSCode
 
-> Don't forget to choose an appropriate profile in VSCode!
+> Don't forget to choose an appropriate profile in VSCode! Configs are synchronized via *GitHub* profile, *NOT* *Microsoft* one
 
 1. [Add](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux) the repo:
 
@@ -134,6 +141,8 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 
 ### 1Password
 
+> #TODO Check if this way of porting configs work at all
+
 1. [Add](https://support.1password.com/install-linux/#debian-or-ubuntu) the repository
 
     ``` Bash
@@ -151,9 +160,17 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
     sudo apt update && sudo apt install 1password
     ```
 
+1. Copy configs
+
+    ``` Bash
+    cp configs/1Password/* /home/chimera/.config/1Password/settings/
+    ```
+
 ## Installing important non-directly coding-related programs
 
 ### Firefox
+
+> Configs are synchronized automatically
 
 1. [Add](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions-recommended) the repo:
 
