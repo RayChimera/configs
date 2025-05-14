@@ -29,11 +29,18 @@ Assuming *Debian*/*Ubuntu*: #TODO
         1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
         1. Copy *zsh* config from `~` to `~/.zshrc`:
 
-        ``` Bash
-        cp zsh/.zshrc ~/.zshrc
-        ```
+            ``` Bash
+            cp zsh/.zshrc ~/.zshrc
+            ```
 
-        1. Copy *powerlevel10k* theme:
+        1. [Install fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+        1. Install *Powerlevel10k*
+
+            ``` Bash
+            git clone --depth=1 <https://github.com/romkatv/powerlevel10k.git> "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+            ```
+
+        1. Copy *Powerlevel10k* config:
 
         ``` Bash
         cp zsh/.p10k.zsh ~/.p10k.zsh
