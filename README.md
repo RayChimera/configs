@@ -9,7 +9,7 @@ Chimera's linux distro configs for a new installations
 ### Common shortcuts
 
 * :white_check_mark: - My default option for a tool where multiple options are available
-* No checkmark - backup option for a tool (I consider switching to it probably or legacy tool). I shouldn't install it if I'm not sure I want to switch right now
+* No checkmark - backup option for a tool (I consider switching to it probably or a legacy tool). I shouldn't install it if I'm not sure I want to switch right now
 
 ### Basic ideas
 
@@ -28,7 +28,7 @@ Chimera's linux distro configs for a new installations
 
 ### Prerequisites
 
-Assuming *Debian*/*Ubuntu* and derivatives: #TODO
+Assuming *Debian* and derivatives: #TODO
 
 1. Install prerequisites
 
@@ -36,7 +36,7 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     sudo apt install build-essential wget curl gpg apt-transport-https git
     ```
 
-1. Unfortunately, for now also install *Flatpak* and add FlatHub repo
+1. Unfortunately, for now also install *Flatpak* and add FlatHub repo (for Telegram 🤬)
 
     ``` Bash
     sudo apt install flatpak
