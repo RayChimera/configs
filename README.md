@@ -96,6 +96,8 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 
 ### Helix
 
+> Helix usage manual is [here](https://docs.helix-editor.com/usage.html)
+
 1. [Install](https://docs.helix-editor.com/package-managers.html) *Helix*:
 
     * From PPA (`Ubuntu`):
