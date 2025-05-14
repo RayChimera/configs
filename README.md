@@ -20,7 +20,7 @@ Chimera's linux distro configs for a new installations
 
 Assuming *Debian*/*Ubuntu* and derivatives: #TODO
 
-1. Install prerequisites:
+1. Install prerequisites
 
     ``` Bash
     sudo apt install build-essential wget curl gpg apt-transport-https git
@@ -31,6 +31,14 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     ``` Bash
     mkdir ~/Projects
     ```
+
+1. Clone this repo there
+
+    ``` Bash
+    git clone git@github.com:RayChimera/configs.git && cd ~/Projects/configs
+    ```
+
+1. Following commands assume you are running them from `~/Projects/configs`
 
 ### Shell
 
