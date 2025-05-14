@@ -39,7 +39,6 @@ Assuming *Debian*/*Ubuntu*: #TODO
         cp zsh/.p10k.zsh ~/.p10k.zsh
         ```
 
-        > Switch to an actual config ffs #TODO
     * If *fish* is desired:
         > #TODO
 

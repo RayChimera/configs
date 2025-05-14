@@ -117,3 +117,10 @@ alias ohmyzsh="nano ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/chimera/google-cloud-sdk/path.zsh.inc' ]; then . '/home/chimera/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/chimera/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/chimera/google-cloud-sdk/completion.zsh.inc'; fi
