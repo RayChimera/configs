@@ -2,6 +2,8 @@
 
 Chimera's linux distro configs for a new installations
 
+> Idea: make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
+
 ## Basics
 
 ### Prerequisites
@@ -26,7 +28,12 @@ Assuming *Debian*/*Ubuntu*: #TODO
 ```sudo apt install zsh fish```
 
     * If *zsh* is desired:
-        1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+        1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: 
+
+            ``` Bash
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+            ```
+
         1. Copy *zsh* config from `~` to `~/.zshrc`:
 
             ``` Bash
