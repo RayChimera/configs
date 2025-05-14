@@ -1,12 +1,17 @@
 ---
 - name: Setting up a shell
   hosts: localhost
+  vars_prompt:
+
+  - name: shell
+    prompt: What shell to install?
+    private: false
+    default: zsh
 
   tasks:
   - name: Install zsh and fish
     become: true
     ansible.builtin.apt:
       pkg:
-        - zsh
-        - fish
+        - {{ shell }}
       state: latest
