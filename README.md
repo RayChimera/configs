@@ -32,7 +32,9 @@ Assuming *Debian*/*Ubuntu*: #TODO
 1. Install a shell (*zsh*/*fish*). Assuming *Debian*/*Ubuntu*:
 ```sudo apt install zsh fish```
 
-### If :white_check_mark: *zsh* is desired
+2. Now choose between *zsh* and *fish* (checkmark shows default)
+
+#### :white_check_mark: *zsh*
 
 1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*:
 
@@ -59,7 +61,7 @@ Assuming *Debian*/*Ubuntu*: #TODO
 cp zsh/.p10k.zsh ~/.p10k.zsh
 ```
 
-### If *fish* is desired
+#### *fish*
 
 1. Install fish:
 
