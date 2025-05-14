@@ -84,9 +84,16 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
 
 1. Copy *Powerlevel10k* config:
 
-``` Bash
-cp configs/zsh/.p10k.zsh ~/.p10k.zsh
-```
+    ``` Bash
+    cp configs/zsh/.p10k.zsh ~/.p10k.zsh
+    ```
+
+1. Add a symlink for easier config management in the future
+
+    ``` Bash
+    ln -s ~/.zshrc configs/zsh/.zshrc
+    ln -s ~/.p10k.zsh configs/zsh/.p10k.zsh
+    ```
 
 #### *fish*
 
