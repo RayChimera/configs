@@ -1,2 +1,12 @@
+---
+- name: Setting up a shell
+  hosts: localhost
+  vars_prompt:
+  
+  - name: shell
+    prompt: What shell to install?
+    private: false
+    default: zsh
+
 - import_playbook: prerequisites.yml
 - import_playbook: shells.yml
