@@ -33,6 +33,13 @@ Assuming *Debian*/*Ubuntu* and derivatives: #TODO
     sudo apt install build-essential wget curl gpg apt-transport-https git
     ```
 
+1. Unfortunately, for now also install *Flatpak* and add FlatHub repo
+
+    ``` Bash
+    sudo apt install flatpak
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    ```
+
 1. Make `~/Projects`
 
     ``` Bash
@@ -194,7 +201,13 @@ cp configs/zsh/.p10k.zsh ~/.p10k.zsh
 
 ### Telegram
 
-> #TODO
+> Settings sync #TODO
+
+1. Install via Flatpak
+
+    ``` Bash
+    flatpak install flathub org.telegram.desktop
+    ```
 
 ### Spotify
 
