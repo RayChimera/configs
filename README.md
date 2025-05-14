@@ -4,6 +4,11 @@ Chimera's linux distro configs for a new installations
 
 > Idea: make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
 
+## Common shortcuts
+
+* :heavy_check_mark: - My default option for a tool
+* :white_check_mark: - backup option for a tool (I consider switching to it probably or legacy tool). I shouldn't install it if I'm not sure I want to switch right now
+
 ## Basics
 
 ### Prerequisites
@@ -27,8 +32,9 @@ Assuming *Debian*/*Ubuntu*: #TODO
 1. Install a shell (*zsh*/*fish*). Assuming *Debian*/*Ubuntu*:
 ```sudo apt install zsh fish```
 
-    * If :heavy_check_mark: *zsh* is desired:
-        1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*: 
+    <details>
+        <summary>If :heavy_check_mark: *zsh* is desired</summary>
+        1. [Install](https://ohmyz.sh/#install) *oh-my-zsh* with *curl*:
 
             ``` Bash
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -52,8 +58,9 @@ Assuming *Debian*/*Ubuntu*: #TODO
         ``` Bash
         cp zsh/.p10k.zsh ~/.p10k.zsh
         ```
-
-    * If *fish* is desired:
+    </details>
+    <details>
+        <summary>If :white_check_mark: *fish* is desired:</summary>
         1. Install fish:
 
             ``` Bash
@@ -61,7 +68,7 @@ Assuming *Debian*/*Ubuntu*: #TODO
             ```
 
         > #TODO
-
+    </details>
 1. Get all shells paths:
 ```cat /etc/shells```
 
