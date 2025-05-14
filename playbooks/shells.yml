@@ -3,7 +3,7 @@
   hosts: localhost
 
   tasks:
-  - name: Install zsh and fish
+  - name: Install a chosen shell
     become: true
     ansible.builtin.apt:
       pkg:
