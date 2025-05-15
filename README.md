@@ -42,6 +42,6 @@ Look at the navbar to the right and do each after another
     ansible-playbook playbooks/setup.yml
     ```
 
-## Manual, Non-Ansible Way (tm)
+### Manual, Non-Ansible Way (tm)
 
 You should just follow a manual on the [wiki](https://github.com/RayChimera/configs/wiki). Good luck!
