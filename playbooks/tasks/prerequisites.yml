@@ -1,8 +1,4 @@
 ---
-- name: Prerequisites
-  hosts: localhost
-  tasks:
-
   - name: Install prerequisites
     become: true
     ansible.builtin.apt:
@@ -16,8 +12,8 @@
       state: latest
 
   - name: Install Flatpak
-    ansible.builtin.include_tasks:
-      file: tasks/flatpak.yml
+    ansible.builtin.import_tasks:
+      file: tasks/subtasks/flatpak.yml
   
   - name: Make "Projects" folder
     ansible.builtin.file:

@@ -7,7 +7,6 @@
     private: false
     default: zsh
 
-- ansible.builtin.import_playbook: prerequisites.yml
-- ansible.builtin.import_playbook: shells.yml
-  vars:
-    shell: "{{ shell }}"
+  tasks:
+  - ansible.builtin.import_tasks: tasks/prerequisites.yml
+  - ansible.builtin.import_tasks: tasks/shells.yml
