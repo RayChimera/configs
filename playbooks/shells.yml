@@ -1,12 +1,7 @@
 ---
 - name: Setting up a shell
   hosts: localhost
-
   tasks:
-  - name: Display all variables/facts known for a host
-    debug:
-      var: shell
-    tags: debug_info
 
   - name: Install a chosen shell
     become: true

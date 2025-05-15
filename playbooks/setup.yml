@@ -1,14 +1,13 @@
 ---
 - name: Choose what to install
   hosts: localhost
-  vars_prompt:
-  
+  vars_prompt:  
   - name: shell
     prompt: What shell to install?
     private: false
     default: zsh
 
-- import_playbook: prerequisites.yml
-- import_playbook: shells.yml
+- ansible.builtin.import_playbook: prerequisites.yml
+- ansible.builtin.import_playbook: shells.yml
   vars:
     shell: "{{ shell }}"

@@ -20,6 +20,7 @@
   "developers.experience.dismissed": true,
   "developers.experience.enabled": true,
   "app.keepInTray": true,
+  "sshAgent.syncBookmarksToFilesystem": true,
   "authTags": {
     "app.keepInTray": "lZbNNQnZow8yXHcDoCVQdw57yrxHGU6jVNuSkDY46Xk",
     "appearance.floatingSidebar": "z5JWgBzpY+wML00WdspU5RD5z94Yv3lGO94DPjJe8IE",
@@ -40,6 +41,7 @@
     "sshAgent.sshAuthorizatonModel": "oilKOw7zLmYhZYvWDsWl1QBBY9oj3sK4flRaEnY4BLE",
     "sshAgent.storeKeyTitles": "kWx/jWoV+gvg+PYo/8Bx3PcK6lT1W0NVQvyFPsDp8bw",
     "sshAgent.storeSshKeyTitlesResponseGiven": "paGWeP2C2e8Kd4g7fFwEBR1VW4wRVSnvUI8SzQ1erTg",
+    "sshAgent.syncBookmarksToFilesystem": "SVsJ7qpbci+5swBwzBjYOV8G+emt4e0Ec34GQKtXQgs",
     "ui.routes.lastUsedRoute": "IGkJMdbFb8a5GFbkfUbTfolpTkgL6ctDAR3uupOedNU"
   }
 }
