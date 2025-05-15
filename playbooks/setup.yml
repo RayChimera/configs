@@ -1,7 +1,12 @@
 ---
 - name: Choose what to install
   hosts: localhost
-  vars_prompt:  
+  vars_prompt:
+  - name: username
+    prompt: What is your username?
+    private: false
+    default: chimera
+
   - name: shell
     prompt: What shell to install?
     private: false

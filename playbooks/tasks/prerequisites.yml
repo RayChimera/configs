@@ -24,3 +24,4 @@
     ansible.builtin.git:
       repo: 'https://github.com/RayChimera/configs'
       dest: ~/Projects/configs/
+    ignore_errors: true # TODO remove that after debug

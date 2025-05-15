@@ -1,0 +1,14 @@
+---
+  - name: Download oh-my-zsh
+    ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ignore_errors: true # TODO remove that after debug
+
+  - name: Make a symlink
+    ansible.builtin.file:
+      src: ~/Projects/configs/configs/zsh/.zshrc
+      dest: ~/.zshrc
+      owner: "{{ username }}"
+      group: "{{ username }}"
+      state: link
+
+  - name: Install fonts for Powerlevel10k

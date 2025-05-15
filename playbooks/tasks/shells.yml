@@ -5,3 +5,13 @@
       pkg:
         - "{{ shell }}"
       state: latest
+
+  - name: Configure zsh
+    ansible.builtin.import_tasks:
+      file: tasks/subtasks/zsh.yml
+    when: shell == "zsh"
+
+  - name: Configure fish
+    ansible.builtin.import_tasks:
+      file: tasks/subtasks/fish.yml
+    when: shell == "fish"
