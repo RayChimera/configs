@@ -1,10 +1,12 @@
 # General
 
-Chimera's linux distro configs for new installations
-
-> Use headings list to quickly jump to the section you need, Luke!
-
 ## Informational
+
+> Chimera's linux distro configs for new installations
+
+### Navigation
+
+Look at the navbar to the right and do each after another
 
 ### Common shortcuts
 
@@ -18,12 +20,28 @@ Chimera's linux distro configs for new installations
 
 ### Ideas for improvement
 
-* [x] Make symlinks to configs in the repo instead of copying files for easier sync between computers in the future
+* No at the moment
 
-> Check if it works as intended (the configs should update themselves in the repo)
+### Prerequisites for Ansible Way (tm)
 
-* [ ] Turn it into a *Ansible* or at least a *bash* script
+1. Make sure Python is installed (example for Debian derivatives, use `dnf` for Fedora/RHEL etc)
 
-## Wiki
+    ``` Bash
+    sudo apt install python
+    ```
 
-The rest of the guide is available on the [wiki](https://github.com/RayChimera/configs/wiki)
+1. Install Ansible (*not* `ansible-core`)
+
+    ``` Bash
+    sudo apt install ansible
+    ```
+
+1. You are ready to run playbooks now! (you can setup your inventory etc but it's not required if you are configuring `localhost`). All of the playbooks are in the `playbooks` folder. For example:
+
+    ``` Bash
+    ansible-playbook playbooks/setup.yml
+    ```
+
+## Manual, Non-Ansible Way (tm)
+
+You should just follow a manual on the [wiki](https://github.com/RayChimera/configs/wiki). Good luck!
