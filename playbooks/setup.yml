@@ -10,7 +10,7 @@
   - name: shell
     prompt: What shell to install?
     private: false
-    default: zsh
+    default: fish
 
   tasks:
   - ansible.builtin.import_tasks: tasks/prerequisites.yml
