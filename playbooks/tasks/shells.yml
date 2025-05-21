@@ -7,16 +7,18 @@
       state: latest
 
   - name: Ensure fonts directory exists
-    file:
+    ansible.builtin.file:
       path: "/usr/local/share/fonts/m/"
       state: directory
 
-  - name: Hack exists
-    shell: "/usr/local/share/fonts/m/mesloLGS_NF_*"
+  - name: MesloLGS exists
+    ansible.builtin.shell: "ls /usr/local/share/fonts/m/mesloLGS_NF_*"
     register: meslo_lgs_exists
+    become: true
 
   - name: Download MesloLGS
     when: meslo_lgs_exists is failed
+    become: true
     ansible.builtin.get_url:
       url: "{{ item.url }}"
       dest: "{{ item.dest }}"
