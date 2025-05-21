@@ -11,10 +11,6 @@
       group: "{{ username }}"
       state: link
 
-  - name: Install fonts for Powerlevel10k
-    ansible.builtin.meta:
-      noop # TODO Actually install fonts (for real)
-
   - name: Clone a Powerlevel10k git repo
     ansible.builtin.git:
       repo: 'https://github.com/romkatv/powerlevel10k'

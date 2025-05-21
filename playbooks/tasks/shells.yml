@@ -6,6 +6,30 @@
         - "{{ shell }}"
       state: latest
 
+  - name: Ensure fonts directory exists
+    file:
+      path: "/usr/local/share/fonts/m/"
+      state: directory
+
+  - name: Hack exists
+    shell: "/usr/local/share/fonts/m/mesloLGS_NF_*"
+    register: meslo_lgs_exists
+
+  - name: Download MesloLGS
+    when: meslo_lgs_exists is failed
+    ansible.builtin.get_url:
+      url: "{{ item.url }}"
+      dest: "{{ item.dest }}"
+    loop:
+      - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true", dest: "/usr/local/share/fonts/m/mesloLGS_NF_regular.ttf" }
+      - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true", dest: "/usr/local/share/fonts/m/mesloLGS_NF_bold.ttf" }
+      - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true", dest: "/usr/local/share/fonts/m/mesloLGS_NF_italic.ttf" }
+      - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true", dest: "/usr/local/share/fonts/m/mesloLGS_NF_bold_italic.ttf" }
+
+  - name: Setup terminal
+    ansible.builtin.meta:
+      noop # TODO Actually install fonts (for real)
+
   - name: Configure zsh
     ansible.builtin.import_tasks:
       file: tasks/subtasks/zsh.yml
