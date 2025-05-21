@@ -45,3 +45,7 @@
     ansible.builtin.import_tasks:
       file: tasks/subtasks/fish.yml
     when: shell == "fish"
+
+  - name: Set default shell
+    become: true
+    ansible.builtin.shell: "chsh -s /usr/bin/{{ shell }} {{ username }}"
