@@ -20,8 +20,15 @@
       path: ~/Projects
       state: directory
 
+  - name: Ensure the local repo exists
+    ansible.builtin.git:
+      repo: 'https://github.com/RayChimera/configs'
+      dest: ~/Projects/configs/
+      update: no
+    register: repo_exists
+
   - name: Clone your repo with configs
     ansible.builtin.git:
       repo: 'https://github.com/RayChimera/configs'
       dest: ~/Projects/configs/
-    ignore_errors: true # TODO remove that after debug
+    when: repo_exists is false

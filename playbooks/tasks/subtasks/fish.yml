@@ -1,6 +1,6 @@
 ---
   - name: Download Fisher
-    ansible.builtin.shell: curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+    ansible.builtin.shell: curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | fisher install jorgebucaran/fisher
 
   - name: Install Tide
     ansible.builtin.shell: fisher install IlanCosman/tide@v6
