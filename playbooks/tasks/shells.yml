@@ -12,9 +12,9 @@
       state: directory
 
   - name: MesloLGS exists
-    ansible.builtin.shell: "ls /usr/local/share/fonts/m/mesloLGS_NF_*"
-    register: meslo_lgs_exists
     become: true
+    ansible.builtin.shell: "touch -a /usr/local/share/fonts/m/ && ls /usr/local/share/fonts/m/MesloLGS_NF_*"
+    register: meslo_lgs_exists
 
   - name: Download MesloLGS
     when: meslo_lgs_exists is failed
@@ -24,13 +24,13 @@
       dest: "{{ item.dest }}"
     loop:
       - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true",
-          dest: "/usr/local/share/fonts/m/mesloLGS_NF_regular.ttf" }
+          dest: "/usr/local/share/fonts/m/MesloLGS_NF_regular.ttf" }
       - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true",
-          dest: "/usr/local/share/fonts/m/mesloLGS_NF_bold.ttf" }
+          dest: "/usr/local/share/fonts/m/MesloLGS_NF_bold.ttf" }
       - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true",
-          dest: "/usr/local/share/fonts/m/mesloLGS_NF_italic.ttf" }
+          dest: "/usr/local/share/fonts/m/MesloLGS_NF_italic.ttf" }
       - {url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true",
-          dest: "/usr/local/share/fonts/m/mesloLGS_NF_bold_italic.ttf" }
+          dest: "/usr/local/share/fonts/m/MesloLGS_NF_bold_italic.ttf" }
 
   - name: Setup terminal
     ansible.builtin.meta:

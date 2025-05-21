@@ -1,7 +1,6 @@
 ---
   - name: Download oh-my-zsh
     ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ignore_errors: true # TODO remove that after debug
 
   - name: Make a symlink for ~/.zshrc
     ansible.builtin.file:
@@ -14,7 +13,7 @@
   - name: Clone a Powerlevel10k git repo
     ansible.builtin.git:
       repo: 'https://github.com/romkatv/powerlevel10k'
-      dest:  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+      dest:  ~/.oh-my-zsh/themes/powerlevel10k
 
   - name: Make a symlink for ~/.p10k.zsh
     ansible.builtin.file:
