@@ -41,7 +41,7 @@
       }
 
 - name: Setup terminal
-  ansible.builtin.meta: noop # TODO Actually install fonts (for real)
+  ansible.builtin.meta: noop # TODO Actually setup terminal (for real)
 
 - name: Configure zsh
   ansible.builtin.import_tasks:

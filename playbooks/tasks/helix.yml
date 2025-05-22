@@ -1,0 +1,21 @@
+---
+- name: Add repository for Helix
+  become: true
+  ansible.builtin.apt_repository:
+    repo: ppa:maveonair/helix-editor
+  ignore_errors: true # FIXME Needed for Ubuntu 25.04 for the time being; no Release file in the repo
+
+- name: Install Helix
+  become: true
+  ansible.builtin.apt:
+    pkg:
+      - helix
+    state: latest
+
+- name: Make a symlink to configs
+  ansible.builtin.file:
+    src: ~/Projects/configs/configs/helix
+    dest: ~/.config/helix
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    state: link
