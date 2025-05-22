@@ -1,34 +1,34 @@
 ---
-  - name: Install prerequisites
-    become: true
-    ansible.builtin.apt:
-      pkg:
-        - build-essential
-        - wget
-        - curl
-        - gpg
-        - apt-transport-https
-        - git
-      state: latest
+- name: Install prerequisites
+  become: true
+  ansible.builtin.apt:
+    pkg:
+      - build-essential
+      - wget
+      - curl
+      - gpg
+      - apt-transport-https
+      - git
+    state: latest
 
-  - name: Install Flatpak
-    ansible.builtin.import_tasks:
-      file: tasks/subtasks/flatpak.yml
-  
-  - name: Make "Projects" folder
-    ansible.builtin.file:
-      path: ~/Projects
-      state: directory
+- name: Install Flatpak
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/flatpak.yml
 
-  - name: Ensure the local repo exists
-    ansible.builtin.git:
-      repo: 'https://github.com/RayChimera/configs'
-      dest: ~/Projects/configs/
-      update: no
-    register: repo_exists
+- name: Make "Projects" folder
+  ansible.builtin.file:
+    path: ~/Projects
+    state: directory
 
-  - name: Clone your repo with configs
-    ansible.builtin.git:
-      repo: 'https://github.com/RayChimera/configs'
-      dest: ~/Projects/configs/
-    when: repo_exists is false
+- name: Ensure the local repo exists
+  ansible.builtin.git:
+    repo: "https://github.com/RayChimera/configs"
+    dest: ~/Projects/configs/
+    update: no
+  register: repo_exists
+
+- name: Clone your repo with configs
+  ansible.builtin.git:
+    repo: "https://github.com/RayChimera/configs"
+    dest: ~/Projects/configs/
+  when: repo_exists is false

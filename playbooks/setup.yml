@@ -2,16 +2,16 @@
 - name: Choose what to install
   hosts: localhost
   vars_prompt:
-  - name: username
-    prompt: What is your username?
-    private: false
-    default: chimera
+    - name: username
+      prompt: What is your username?
+      private: false
+      default: chimera
 
-  - name: shell
-    prompt: What shell to install?
-    private: false
-    default: fish
+    - name: shell
+      prompt: What shell to install?
+      private: false
+      default: fish
 
   tasks:
-  - ansible.builtin.import_tasks: tasks/prerequisites.yml
-  - ansible.builtin.import_tasks: tasks/shells.yml
+    - ansible.builtin.import_tasks: tasks/prerequisites.yml
+    - ansible.builtin.import_tasks: tasks/shells.yml

@@ -1,24 +1,24 @@
 ---
-  - name: Download oh-my-zsh
-    ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+- name: Download oh-my-zsh
+  ansible.builtin.shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-  - name: Make a symlink for ~/.zshrc
-    ansible.builtin.file:
-      src: ~/Projects/configs/configs/zsh/.zshrc
-      dest: ~/.zshrc
-      owner: "{{ username }}"
-      group: "{{ username }}"
-      state: link
+- name: Make a symlink for ~/.zshrc
+  ansible.builtin.file:
+    src: ~/Projects/configs/configs/zsh/.zshrc
+    dest: ~/.zshrc
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    state: link
 
-  - name: Clone a Powerlevel10k git repo
-    ansible.builtin.git:
-      repo: 'https://github.com/romkatv/powerlevel10k'
-      dest:  ~/.oh-my-zsh/themes/powerlevel10k
+- name: Clone a Powerlevel10k git repo
+  ansible.builtin.git:
+    repo: "https://github.com/romkatv/powerlevel10k"
+    dest: ~/.oh-my-zsh/themes/powerlevel10k
 
-  - name: Make a symlink for ~/.p10k.zsh
-    ansible.builtin.file:
-      src: ~/Projects/configs/configs/zsh/.p10k.zsh
-      dest: ~/.p10k.zsh
-      owner: "{{ username }}"
-      group: "{{ username }}"
-      state: link
+- name: Make a symlink for ~/.p10k.zsh
+  ansible.builtin.file:
+    src: ~/Projects/configs/configs/zsh/.p10k.zsh
+    dest: ~/.p10k.zsh
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    state: link
