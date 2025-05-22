@@ -10,4 +10,4 @@
     executable: /bin/fish
 
 - name: Configure Tide
-  ansible.builtin.script: ~/Projects/configs/configs/fish/tide-config.sh
+  ansible.builtin.script: ~/Projects/configs/scripts/tide-config.sh
