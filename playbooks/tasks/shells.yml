@@ -11,34 +11,18 @@
     path: "/usr/local/share/fonts/m/"
     state: directory
 
-- name: MesloLGS exists
+- name: FiraCode exists
   become: true
-  ansible.builtin.shell: "touch -a /usr/local/share/fonts/m/ && ls /usr/local/share/fonts/m/MesloLGS_NF_*"
-  register: meslo_lgs_exists
+  ansible.builtin.shell: "touch -a /usr/local/share/fonts/f/ && ls /usr/local/share/fonts/f/FiraCodeNerdFont_*"
+  register: fira_code_exists
 
-- name: Download MesloLGS
-  when: meslo_lgs_exists is failed
+- name: Download FiraCode
+  when: fira_code_exists is failed
   become: true
-  ansible.builtin.get_url:
-    url: "{{ item.url }}"
-    dest: "{{ item.dest }}"
-  loop:
-    - {
-        url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true",
-        dest: "/usr/local/share/fonts/m/MesloLGS_NF_regular.ttf",
-      }
-    - {
-        url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true",
-        dest: "/usr/local/share/fonts/m/MesloLGS_NF_bold.ttf",
-      }
-    - {
-        url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true",
-        dest: "/usr/local/share/fonts/m/MesloLGS_NF_italic.ttf",
-      }
-    - {
-        url: "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true",
-        dest: "/usr/local/share/fonts/m/MesloLGS_NF_bold_italic.ttf",
-      }
+  ansible.builtin.unarchive:
+    src: "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip"
+    dest: "/usr/local/share/fonts/f/"
+    remote_src: yes
 
 - name: Setup terminal
   ansible.builtin.meta: noop # TODO Actually setup terminal (for real)

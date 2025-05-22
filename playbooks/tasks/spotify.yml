@@ -9,3 +9,4 @@
     pkg:
       - spotify-client
     state: latest
+  ignore_errors: true # FIXME Needed for Ubuntu 25.04 for the time being; no Release file in the repo
