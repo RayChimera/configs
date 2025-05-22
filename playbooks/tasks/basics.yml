@@ -40,3 +40,15 @@
 - name: Set default shell
   become: true
   ansible.builtin.shell: "chsh -s /usr/bin/{{ shell }} {{ username }}"
+
+- name: Install Helix
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/helix.yml
+
+- name: Install VSCode
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/vscode.yml
+
+- name: Install 1Password
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/1password.yml

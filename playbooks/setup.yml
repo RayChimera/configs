@@ -14,9 +14,5 @@
 
   tasks:
     - ansible.builtin.import_tasks: tasks/prerequisites.yml
-    - ansible.builtin.import_tasks: tasks/shells.yml
-    - ansible.builtin.import_tasks: tasks/helix.yml
-    - ansible.builtin.import_tasks: tasks/vscode.yml
-    - ansible.builtin.import_tasks: tasks/1password.yml
-    - ansible.builtin.import_tasks: tasks/firefox.yml
-    - ansible.builtin.import_tasks: tasks/spotify.yml
+    - ansible.builtin.import_tasks: tasks/basics.yml
+    - ansible.builtin.import_tasks: tasks/important-programs.yml

@@ -1,0 +1,12 @@
+---
+- name: Install Firefox
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/firefox.yml
+
+- name: Install Telegram
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/telegram.yml
+
+- name: Install Spotify
+  ansible.builtin.import_tasks:
+    file: tasks/subtasks/spotify.yml
