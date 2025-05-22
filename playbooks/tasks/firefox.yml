@@ -1,0 +1,11 @@
+---
+- name: Install the apt repository
+  become: true
+  ansible.builtin.shell: /home/{{ username }}/Projects/configs/scripts/firefox-repo.sh
+
+- name: Install Firefox
+  become: true
+  ansible.builtin.apt:
+    pkg:
+      - firefox
+    state: latest
