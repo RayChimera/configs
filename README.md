@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/user/4bb6a2d0-5690-4211-836b-ba1d5a05c040/project/2a61d983-9808-45ce-93f0-924a7d14686b.svg)](https://wakatime.com/badge/user/4bb6a2d0-5690-4211-836b-ba1d5a05c040/project/2a61d983-9808-45ce-93f0-924a7d14686b)
+
 # Informational
 
 > Chimera's linux distro configs for new installations
