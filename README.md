@@ -30,7 +30,7 @@
     > Of course, you can setup your inventory etc but it's not required if you are configuring `localhost`. All of the playbooks are in the `playbooks` folder, but you'll only need `playbooks/setup.yml`
 
     ``` Bash
-    ansible-playbook playbooks/setup.yml
+    ansible-playbook playbooks/setup.yml --ask-become-pass
     ```
 
 ## Manual, Non-Ansible Way (tm)
